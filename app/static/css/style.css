@@ -1,3 +1,18 @@
 body {
     font-family: Helvetica, "Helvetica Neue", sans-serif;
 }
+
+.red{
+    color: red;
+}
+
+.CenterThic{
+    font-family: "Centaur", CenturyGothic, AppleGothic,sans-serif;
+}
+.blue {
+    color: blue;
+}
+
+.fnt{
+    font-size: 150%;
+}
