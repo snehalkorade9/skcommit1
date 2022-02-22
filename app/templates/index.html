@@ -3,61 +3,123 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
 
         <title>This is {{ name }} Website</title>
     {% endblock %}
 
 </head>
 <body>
-<div id="heading1" class="blue">
-    <h1>Hello Everyone this is Snehal</h1>
-</div>
+<div class="container">
+    <div class="row">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!--<a class="navbar-brand" href="#">Navbar</a>--!>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/about">About</a>
+                            </li>
 
-<div id="content">
-    <h2>
-        <p>
-            <span class="red"><span class="CenterThic fnt">L</span>orem</span> ipsum dolor sit amet, consectetur
-            adipiscing elit. Cras vitae dolor non est rutrum mattis at nec metus. Duis luctus interdum odio, id eleifend
-            turpis feugiat vitae. Vestibulum molestie non ante id ultricies. Nulla enim eros, pharetra ut dolor ut,
-            condimentum porttitor est. Proin dictum erat nec ipsum dignissim varius. Nam sapien odio, rutrum ac
-            imperdiet et, imperdiet sit amet justo. Proin volutpat, nulla sed congue molestie, elit purus dapibus massa,
-            et dictum purus velit at ligula. Suspendisse interdum dictum posuere. Vivamus efficitur hendrerit sem, et
-            porttitor turpis rhoncus sit amet.
-        </p>
-        <p>
-            Cras sit amet lorem at sem cursus efficitur quis ac neque. Nulla metus urna, blandit ut suscipit eget,
-            vulputate eu sem. In elementum magna vitae facilisis accumsan. Mauris quis diam eget sapien semper feugiat
-            sed at nisl. Suspendisse felis metus, facilisis in est sed, ornare lobortis est. Curabitur non orci ornare,
-            venenatis nisl finibus, consequat tortor. Cras scelerisque odio ac luctus fringilla. Class aptent taciti
-            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-        <p>
-            Nam quis ultricies nisi. Vivamus vitae risus dui. Maecenas sit amet ante non nisi rutrum mollis sit amet vel
-            elit. Nunc at metus velit. Quisque eu tortor nisi. Suspendisse id tellus et massa porta venenatis vitae sit
-            amet orci. Mauris malesuada et dolor eu tempus. Vestibulum semper quam vel massa sodales placerat. Phasellus
-            commodo dictum lacus, sit amet egestas leo porttitor ac.
-        </p>
-        <p>
-            Nulla malesuada semper mi et porttitor. Duis rhoncus lorem leo, vel ullamcorper ipsum varius ut. Vestibulum
-            a ultricies mi. Nullam porttitor nisi sit amet eros finibus, at consectetur lacus luctus. Nulla eleifend mi
-            sit amet elit laoreet, ut elementum augue eleifend. Etiam vel leo lectus. Sed tempus elit quis est gravida
-            tempor quis eu elit. Sed interdum dapibus imperdiet. Class aptent taciti sociosqu ad litora torquent per
-            conubia nostra, per inceptos himenaeos. Morbi quis cursus tellus, vitae pulvinar justo. Proin eu nibh nisi.
-            Donec venenatis consequat tincidunt. Mauris aliquet elementum congue.
-        </p>
-        <p>
-            Nunc sollicitudin ullamcorper elit, dignissim cursus nibh iaculis sed. Maecenas ut enim at velit facilisis
-            mollis at at eros. Ut sed odio malesuada, condimentum tortor a, convallis mi. Ut non nibh facilisis,
-            consequat risus et, pulvinar lectus. Nunc semper, nunc sit amet tincidunt sodales, velit velit mattis elit,
-            ut dignissim erat arcu sed neque. Pellentesque a volutpat quam, sit amet egestas dui. Mauris accumsan ac
-            velit vitae pharetra. Quisque neque orci, ultrices ut dui eu, consequat faucibus diam. Maecenas sit amet
-            risus mauris. Nam sit amet suscipit tellus. Pellentesque sit amet nunc mattis, fermentum odio eu, posuere
-            justo.
-        </p>
-    </h2>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+    </div>
+    <div class="row-cols">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='images/36296.jpg') }}" class="d-block w-100"
+                         alt="{{ url_for('static', filename='images/36296.jpg') }}">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/download.jpg') }}" class="d-block w-100"
+                         alt="{{ url_for('static', filename='images/download.jpg') }}">
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-4">
+            <div class="card" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card 1</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link1</a>
+                    <a href="#" class="card-link">Another link1</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card 2</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link 2</a>
+                    <a href="#" class="card-link">Another link 2</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="card" style="width: 26rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card 3</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="card-link">Card link3</a>
+                    <a href="#" class="card-link">Another link3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
 </body>
 </html>

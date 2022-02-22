@@ -3,8 +3,8 @@ from flask import render_template
 from . controller import ControllerBase
 
 
-class IndexController(ControllerBase):
+class AboutController(ControllerBase):
     @staticmethod
     def get():
-        name = "K Snehal test world"
-        return render_template('index.html', name=name)
+        name = "sk"
+        return render_template('about.html', name=name)
